@@ -1,0 +1,238 @@
+  <div class="center-block w-xxl1 w-auto-xs p-v-md " >
+    <div class="navbar">
+      <div class="navbar-brand m-t-lg text-center">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve" style="
+                width: 24px; height: 24px;">
+          <path d="M 50 0 L 100 14 L 92 80 Z" fill="rgba(139, 195, 74, 0.5)"></path>
+          <path d="M 92 80 L 50 0 L 50 100 Z" fill="rgba(139, 195, 74, 0.8)"></path>
+          <path d="M 8 80 L 50 0 L 50 100 Z" fill="#fff"></path>
+          <path d="M 50 0 L 8 80 L 0 14 Z" fill="rgba(255, 255, 255, 0.6)"></path>
+        </svg>
+        <span class="m-l inline">{{app.name}}</span>
+      </div>
+    </div>
+    <div class="panel md-whiteframe-z1 text-color m">
+      <div class="panel-heading bg-white">
+        <h4><b>Personal Details</b></h4>
+      </div>
+      <hr style="margin: auto;"/>
+      <form name="form">
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-sm-4 m-b">
+              <div class="md-form-group float-label">
+                <input type="text" class="md-input" ng-model="user.firstname" required>
+                <label>First Name</label>
+              </div>   
+            </div>
+            <div class="col-sm-4 m-b">
+              <div class="md-form-group float-label">
+                <input type="text" class="md-input" ng-model="user.lastname" required>
+                <label>Last Name</label>
+              </div>
+            </div>
+            <div class="col-sm-4 m-b">
+             
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-8 m-b">
+              <div class="md-form-group float-label">
+                <input type="text" class="md-input" ng-model="user.about" required>
+                <label>About</label>
+              </div>   
+            </div>
+            
+            <div class="col-sm-4 m-b">
+              <div class="md-form-group float-label">
+                <select class="md-input" ng-model="f.b" required >
+                    <option value="">Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-3 m-b">
+              <select name="country" class="md-input" id="countryId">
+                <option value="">Select Country</option>
+              </select>
+            </div>
+            <div class="col-sm-3 m-b">
+              <select name="state" class="md-input" id="stateId">
+                <option value="">Select State</option>
+               </select>             
+            </div>
+            <div class="col-sm-3 m-b">
+              <select name="city" class="md-input" id="cityId">
+                <option value="">Select City</option>
+              </select>
+            </div>
+            <div class="col-sm-3 m-b">
+              <div class="md-form-group float-label">
+                <input type="text" class="md-input" ng-model="Pincode" required>
+                <label>Pincode</label>
+              </div>
+            </div>
+          </div>
+          <footer class="p text-right">
+            <button type="submit" class="md-btn md-raised p-h-md"> Next</button>
+          </footer>
+      </form>
+    </div>
+    <!-- <div class="panel md-whiteframe-z1 text-color m">
+      <div class="panel-heading bg-white">
+        <h4><b>Contact Details</b></h4>
+      </div>
+      <hr style="margin: auto;"/>
+      <form name="form">
+        <div class="panel-body">
+          <span class="font-bold">WebSite</span>
+          <md-input-container class="md-block" style="margin-bottom: 0px;">
+                <label>Website URL</label>
+                <input  name="Website" ng-model='user.Website' type="url" pattern="">
+                <div ng-messages="user.Website.$error">
+                  <div ng-message="pattern"></div>
+                </div>
+              </md-input-container>
+          <span class="font-bold">Social Profile</span>
+          <div class="row">
+            <div class="col-sm-6 m-b">
+              <md-input-container class="md-block" style="margin-bottom: 0px;padding:2px; ">
+                <label>Facebook URL</label>
+                <input  name="fb" ng-model='user.fb' type="url" pattern="http://www\.facebook\.com\/(.+)|https://www\.facebook\.com\/(.+)">
+                <div ng-messages="user.fb.$error">
+                  <div ng-message="pattern">Facebook</div>
+                </div>
+              </md-input-container> 
+            </div>
+            <div class="col-sm-6 m-b">
+              <md-input-container class="md-block" style="margin-bottom: 0px;padding:2px;">
+                <label>Twitter URL</label>
+                <input  name="twitter" ng-model='user.twitter' type="url" pattern="http://\.twitter\.com\/(.+)|https://\.twitter\.com\/(.+)">
+                <div ng-messages="user.fb.$error">
+                  <div ng-message="pattern">Twitter</div>
+                </div>
+              </md-input-container>        
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6 m-b">
+              <md-input-container class="md-block" style="margin-bottom: 0px;padding:2px;">
+                <label>Google Plus URL</label>
+                <input  name="gplus" ng-model='user.gplus' type="url" pattern="">
+                <div ng-messages="user.gplus.$error">
+                  <div ng-message="pattern"></div>
+                </div>
+              </md-input-container> 
+            </div>
+            <div class="col-sm-6 m-b">
+              <md-input-container class="md-block" style="margin-bottom: 0px;padding:2px;">
+                <label>Instagram URL</label>
+                <input  name="insta" ng-model='user.insta' type="url" pattern="">
+                <div ng-messages="user.insta.$error">
+                  <div ng-message="pattern"></div>
+                </div>
+              </md-input-container>        
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6 m-b">
+              <md-input-container class="md-block" style="margin-bottom: 0px;padding:2px;">
+                <label>Youtube channel URL</label>
+                <input  name="youtube" ng-model='user.youtube' type="url" pattern="">
+                <div ng-messages="user.youtube.$error">
+                  <div ng-message="pattern"></div>
+                </div>
+              </md-input-container> 
+            </div>
+            <div class="col-sm-6 m-b">
+              <md-input-container class="md-block" style="margin-bottom: 0px;padding:2px;">
+                <label>LinkedIn URL</label>
+                <input  name="in" ng-model='user.in' type="url" pattern="">
+                <div ng-messages="user.in.$error">
+                  <div ng-message="pattern"></div>
+                </div>
+              </md-input-container>        
+            </div>
+          </div>
+          <footer class="p text-right">
+            <button type="submit" class="md-btn md-raised p-h-md"> Next</button>
+          </footer>
+      </form>
+    </div> -->
+    <!-- <div class="panel md-whiteframe-z1 text-color m">
+      <div class="panel-heading bg-white">
+        <h4><b>Phone Number</b></h4>
+      </div>
+      <hr style="margin: auto;"/>
+      <form name="form">
+        <div class="panel-body" style="padding-bottom: 0px;">
+          <md-input-container class="md-block" style="margin-bottom: 0px;padding:2px;">
+                <label>Phone Number</label>
+                <input  name="phone" ng-model='user.phone' type="phone" maxlength="10"  pattern="[0-9]{10}">
+                <div ng-messages="user.phone.$error">
+                  <div ng-message="pattern"></div>
+                </div>
+              </md-input-container>
+        </div>
+        <footer class="center-block w-xxl p-v-md" style="padding-left: 90px;">
+          <button type="submit" class="md-btn md-raised p-h-md">Sent OTP</button>
+        </footer>
+        <hr style="margin: auto;"/>
+        <div class="panel-body" style="padding-bottom: 0px;">
+          <md-input-container class="md-block" style="margin-bottom: 0px;padding:2px;">
+                <label>OTP Number</label>
+                <input  name="otp" ng-model='user.otp' type="number" maxlength="10"  pattern="[0-9]{10}">
+                <div ng-messages="user.otp.$error">
+                  <div ng-message="pattern"></div>
+                </div>
+              </md-input-container>
+        </div>
+        <footer class="p text-right">
+          <button type="submit"  class="md-btn md-raised p-h-md {{app.setting.theme.primary}}">Save</button>
+          <button type="submit" class="md-btn md-raised p-h-md {{app.setting.theme.primary}}">cancel</button>
+        </footer>
+      </form>
+    </div> -->
+    <!-- <div class="panel md-whiteframe-z1 text-color m" align="center">
+        <h2 style="font-size: -webkit-xxx-large; margin-bottom: 20px; letter-spacing: 5px;">HELLO!</h2>
+        <h3 style="margin-bottom: 20px; "><b>Welcome to Cast Tree</b></h3>
+        <h5 style="margin-bottom: 20px;"><b>You are almost ready just a click away.</b></h5>
+
+          <div class="text-center">
+          <div class="inline">
+            <div ui-jp="easyPieChart" ui-options="{
+                percent: 50,
+                lineWidth: 70,
+                trackColor: '#fff',
+                barColor: '{{app.color.success}}',
+                scaleColor: '#00ff00',
+                size: 167,
+                lineCap: 'butt',
+                rotate: 360,
+                animate: 2000
+              }">
+              <div class="font-bold h3 text-primary">
+                50%
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h4 style="margin-bottom: 20px;"><b>Please check your email for a confirmation message from us.</b></h4>
+        <h5 style="margin-bottom: 20px;"><b>Didn’t get a confirmation email ? </b></h5>
+        <h5 style="margin-bottom: 20px;"><b>Please check the spam folder in your email program. If it’s not there, we can send an another verification mail </b></h5>
+
+        <button style="margin-bottom: 20px;" type="submit" class="md-btn md-raised p-h-md {{app.setting.theme.primary}}">Resend Verification Mail</button>
+         <h5 style="margin-bottom: 10px;"><b>Have Questions ? </b></h5>
+         <h5 style="margin-bottom: 20px;"><b><u> <a href="#">Vist our FAQ</a></u> </b></h5>
+
+         
+     </div>
+ -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://iamrohit.in/lab/js/location.js"></script>
+  </div>

@@ -1,0 +1,48 @@
+<div class="center-block w-xxl1 w-auto-xs p-v-md " >
+    <div class="navbar">
+      <div class="navbar-brand m-t-lg text-center">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve" style="
+                width: 24px; height: 24px;">
+          <path d="M 50 0 L 100 14 L 92 80 Z" fill="rgba(139, 195, 74, 0.5)"></path>
+          <path d="M 92 80 L 50 0 L 50 100 Z" fill="rgba(139, 195, 74, 0.8)"></path>
+          <path d="M 8 80 L 50 0 L 50 100 Z" fill="#fff"></path>
+          <path d="M 50 0 L 8 80 L 0 14 Z" fill="rgba(255, 255, 255, 0.6)"></path>
+        </svg>
+        <span class="m-l inline">{{app.name}}</span>
+      </div>
+    </div>
+    <div class="panel md-whiteframe-z1 text-color m">
+      <div class="panel-heading bg-white">
+        <h4><b>Phone Number</b></h4>
+      </div>
+      <hr style="margin: auto;"/>
+      <form name="form">
+        <div class="panel-body" style="padding-bottom: 0px;">
+          <md-input-container class="md-block" style="margin-bottom: 0px;padding:2px;">
+                <label>Phone Number</label>
+                <input  name="phone" ng-model='user.phone' type="phone" maxlength="10"  pattern="[0-9]{10}">
+                <div ng-messages="user.phone.$error">
+                  <div ng-message="pattern"></div>
+                </div>
+              </md-input-container>
+        </div>
+        <footer class="center-block w-xxl p-v-md" style="padding-left: 90px;">
+          <button type="submit" class="md-btn md-raised p-h-md">Sent OTP</button>
+        </footer>
+        <hr style="margin: auto;"/>
+        <div class="panel-body" style="padding-bottom: 0px;">
+          <md-input-container class="md-block" style="margin-bottom: 0px;padding:2px;">
+                <label>OTP Number</label>
+                <input  name="otp" ng-model='user.otp' type="number" maxlength="10"  pattern="[0-9]{10}">
+                <div ng-messages="user.otp.$error">
+                  <div ng-message="pattern"></div>
+                </div>
+              </md-input-container>
+        </div>
+        <footer class="p text-right">
+          <button type="submit"  class="md-btn md-raised p-h-md {{app.setting.theme.primary}}">Save</button>
+          <button type="submit" class="md-btn md-raised p-h-md {{app.setting.theme.primary}}">cancel</button>
+        </footer>
+      </form>
+    </div>
+  </div>
